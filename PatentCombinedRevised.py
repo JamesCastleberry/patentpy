@@ -49,3 +49,5 @@ for line in OpenedDataFile:
         startDay = pointa2 + 17
         endDay = pointa2 + 19
         date = line[startMonth:endMonth] + '-' + line[startDay:endDay] + '-' + line[startYear:endYear]
+final.write(str(counter) + ',' + title + ',' + str(date) + ',' + str(description) + ',' + str(patNumbertot))
+final.write('\n')
