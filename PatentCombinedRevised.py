@@ -59,8 +59,8 @@ for line in OpenedDataFile:
             printedList = ''
             citedCounter = 0
             for citedPats in citedPatNumbs:
-                if citedCounter != 0:
-                    printedList = printedList + '      ' + citedPats
+
+                printedList = printedList + '      ' + citedPats
                 citedCounter = citedCounter + 1
             citedPatNumbs = list()
             final.write(str(patentNumber) + ',' + title + ',' + str(date) + ',' + str(description) + ',' + str(patCounter) + ',' + str(printedList))
@@ -77,8 +77,7 @@ for line in OpenedDataFile:
 printedList = ''
 citedCounter = 0
 for citedPats in citedPatNumbs:
-    if citedCounter != 0:
-        printedList = printedList + '      ' + citedPats
+    printedList = printedList + '      ' + citedPats
     citedCounter = citedCounter + 1
 final.write(str(patentNumber) + ',' + title + ',' + str(date) + ',' + str(description) + ',' + str(patCounter) + ',' + str(printedList))
 final.write('\n')
