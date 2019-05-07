@@ -7,7 +7,7 @@ except:
      print('ERROR: File does not exist')
      exit()
 
-## Ask the user what they want the final returned csv file to be called
+## Ask the user what they want the final returned csv file to be called.
 finalFile = input('What You Want the New csv File To Be Named: ')
 final = open(finalFile,'w+')
 ##Create the top row of the csv
