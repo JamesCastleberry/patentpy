@@ -1,3 +1,8 @@
+#The following program converts the current version of the U.S. government released Patent XML files to a more readable CSV format.
+#The important information that is brought the CSV file about the patents is the Patent Number, Patent Title, Country, Kind of Patent, Date Published,
+#Description, Classification CPC Text, and the number of cited patents. To test this, use the xml file 25PatentsOld.xml.
+
+
 ## Ask the user for the patent file they want to use.
 try:
      dataFile = input('The File You Want to Use: ')
@@ -49,7 +54,7 @@ printedClassTexts = ''
 
 ##A for loop that runs through each line of the xml file given
 for line in OpenedDataFile:
-    #If the line represents the doc number of the patent, add 1 to the number of patents and assign the number to the proper variable
+    #If the line represents the doc number of the patent, add 1 to the number of patents, assign the number to the proper variable and store the patent number.
     if line.startswith('<doc-number') and patentNumberCheck is True:
         counter = counter + 1
         patentNumberLine = line
@@ -74,6 +79,7 @@ for line in OpenedDataFile:
         startCitedPatNum = line.find('>')
         endCitedPatNum = line.find('/doc-numb')
         citedPatNumbs.append(line[startCitedPatNum + 1: endCitedPatNum - 1])
+    #If the line represents classification cpc texts, add them to the list of cpc texts.
     if line.startswith('<classification-cpc'):
         startClassText = line.find('>')
         endClassText = line.find('</classification-cpc')
@@ -132,7 +138,7 @@ for line in OpenedDataFile:
         startDay = pointa2 + 17
         endDay = pointa2 + 19
         date = line[startMonth:endMonth] + '-' + line[startDay:endDay] + '-' + line[startYear:endYear]
-## The following lines insures that the proper variables are  reset and adds the info gathered about the final patent to the csv file
+## The following lines insures that the proper variables are  reset and adds the info gathered about the final patent to the csv file.
 printedList = ''
 printedClassTexts = ''
 citedCounter = 0
