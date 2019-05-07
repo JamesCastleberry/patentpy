@@ -1,6 +1,6 @@
-# This is the program that converts the old (Before 2005) US Government XML patent file format to an easy to read CSV file that pulls important
-#information about each patent. (The Patent Number, Patent Title, Date Published, Description, Number of Cited Patents, and Cited Patent Numbers.) To test, 
-#use the file 25PatentsOld.xml
+## This is the program that converts the old (Before 2005) US Government XML patent file format to an easy to read CSV file that pulls important
+##information about each patent. (The Patent Number, Patent Title, Date Published, Description, Number of Cited Patents, and Cited Patent Numbers.) To test, 
+##use the file 25PatentsOld.xml
 
 
 # ## Ask the user for the patent file they want to use.
