@@ -1,6 +1,6 @@
 #The following program converts the current version of the U.S. government released Patent XML files to a more readable CSV format.
 #The important information that is brought the CSV file about the patents is the Patent Number, Patent Title, Country, Kind of Patent, Date Published,
-#Description, Classification CPC Text, and the number of cited patents. To test this, use the xml file 25PatentsOld.xml.
+#Description, Classification CPC Text, and the number of cited patents. To test this, use the xml file 25PatentsCurrent.xml.
 
 
 ## Ask the user for the patent file they want to use.
